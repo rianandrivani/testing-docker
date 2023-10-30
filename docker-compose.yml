@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  latihan:
+    build: .
+    ports:
+      - 500:8080
+    volumes:
+      - ./app:/kwd
+      - node_modules:/kwd/node_modules
+    restart: always
+
+volumes:
+  node_modules:
